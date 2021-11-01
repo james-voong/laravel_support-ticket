@@ -57,7 +57,7 @@ class TicketController extends Controller
 
         $ticket->save();
 
-        return back();
+        return redirect('/success');
     }
 
     /**
@@ -68,7 +68,7 @@ class TicketController extends Controller
      */
     public function show(Ticket $ticket)
     {
-        //
+        return view($ticket);
     }
 
     /**

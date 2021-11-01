@@ -2,6 +2,13 @@
 
 @section('content')
     <section class="mb-6">
+        <header>
+            <div class="container mx-auto p-4">
+                <h1 class="text-2xl font-bold text-center">
+                    File a support ticket
+                </h1>
+            </div>
+        </header>
         <div class="max-w-screen-md mx-auto">
             <form action="{{ url('/ticket') }}" method="post">
                 @csrf
