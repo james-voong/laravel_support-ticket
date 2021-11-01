@@ -17,9 +17,9 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('address');
-            $table->tinyInteger('year_at_uni');
-            $table->string('degree');
+            $table->string('address')->nullable();
+            $table->tinyInteger('year_at_uni')->nullable();
+            $table->string('degree')->nullable();
             $table->enum('operating_system', ['Windows', 'Mac', 'Linux']);
             $table->text('issue');
             $table->timestamps();
