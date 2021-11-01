@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AllIssuesController;
 use App\Http\Controllers\TicketController;
 
 /*
@@ -20,3 +21,7 @@ Route::post('/ticket', [TicketController::class, 'store']);
 Route::get('/success', function () {
     return view('success');
 })->name('success');
+
+Route::get('/all_issues', function () {
+    return view('all_issues');
+})->name('all_issues');

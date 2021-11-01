@@ -7,10 +7,12 @@
     <title>File a support ticket</title>
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
+    @livewireStyles
 </head>
 <body>
     <main class="p-4">
         @yield('content')
     </main>
+    @livewireScripts
 </body>
 </html>
