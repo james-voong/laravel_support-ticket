@@ -9,6 +9,11 @@ use Illuminate\Validation\Rule;
 class TicketController extends Controller
 {
     /**
+     * Constants to use for the status
+     */
+    const OPEN = "Open";
+    const CLOSED = "Closed";
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

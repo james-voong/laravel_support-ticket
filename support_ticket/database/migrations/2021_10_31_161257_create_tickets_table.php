@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TicketController;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -22,6 +23,7 @@ class CreateTicketsTable extends Migration
             $table->string('degree')->nullable();
             $table->enum('operating_system', ['Windows', 'Mac', 'Linux']);
             $table->text('issue');
+            $table->enum('status', [TicketController::OPEN, TicketController::CLOSED])->default(TicketController::OPEN);
             $table->timestamps();
         });
     }
