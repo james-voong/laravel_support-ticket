@@ -1,4 +1,21 @@
 <div>
+    <div class="w-full flex pb-10 justify-center">
+        <div class="w-1/3 relative mx-1">
+            <select wire:model="orderBy" class="block appearance-none w-full bg-purple-100 border border-gray-200 text-gray-700 py-3
+                    px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-purple-200 focus:border-purple-500">
+                <option value="created_at">Date created</option>
+                <option value="status">Status</option>
+            </select>
+        </div>
+        <div class="w-1/3 relative mx-1">
+            <select wire:model="orderAsc" class="block appearance-none w-full bg-purple-100 border border-gray-200 text-gray-700 py-3
+                    px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-purple-200 focus:border-purple-500">
+                <option value="1">Ascending</option>
+                <option value="0">Descending</option>
+            </select>
+        </div>
+    </div>
+
     <table class="table-auto w-full mb-6">
         <thead>
             <tr>
@@ -24,14 +41,10 @@
                     <td class="border px-4 py-2">{{ $ticket->operating_system }}</td>
                     <td class="border px-4 py-2">{{ $ticket->issue }}</td>
                     <td class="border px-4 py-2">{{ $ticket->created_at->format('d/m/Y H:i') }}</td>
-                    <!-- TODO Implement status -->
                     <td class="border px-4 py-2">{{ $ticket->status }}</td>
                 </tr>
             @endforeach
         </tbody>
     </table>
-
-    @foreach ($tickets as $ticket)
-        {{ $ticket }}
-    @endforeach
+    {!! $tickets->links() !!}
 </div>
