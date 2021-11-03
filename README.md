@@ -16,5 +16,5 @@ vendor/bin/sail up
 * Run
     `npm install && npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`
 
-# Time:
-1500-1700 Create initial project, read docs, watch tutorials, prototype initial
+# Install LiveWire
+* Installed via composer
